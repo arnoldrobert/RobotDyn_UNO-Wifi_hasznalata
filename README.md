@@ -6,6 +6,7 @@ A firmware ráírására szükség lesz az esptool.py alkalmazásra, amit innen 
 
 1. Ha csak az UNO-t szeretnénk használni billentsük ON felé a 3. és 4. gombot, a többit pedig az OFF felé,
 2. Amikor a firmware-t szeretnénk ráírni az ESP -re az 5., 6., 7. és a 8. gombot ON felé, a többit OFF irányába,
+
 A parancssorban (promtban) az esptool.py segitségével írassuk ki az ESP paramétereit a következő paranccsal: **"esptool.py flash_id"**. 
 
 Valami ehhez hasonlót kell, hogy kiírjon:
