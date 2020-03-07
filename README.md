@@ -29,8 +29,18 @@ Detected flash size: 1MB
 Hard resetting via RTS pin...
 ```
 Reseteljük minden parancs között a modult. Most törölnünk kell a flash-t a következő parancsal: **"esptool.py erase_flash"** .
-Utána töltsük le a az aktuális firmware-t a hivatalos ESPRESSIF oldaláról: https://www.espressif.com/en/support/download/at , vagy az én repoziomból: https://github.com/arnoldrobert/Flash-ESP-01-firmware/raw/master/v1.3.0.2_AT_Firmware.bin , és írjuk rá az ESP-re a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 v1.3.0.2_AT_Firmware.bin"**
+Utána töltsük le a az aktuális firmware-t a hivatalos ESPRESSIF oldaláról: https://www.espressif.com/en/support/download/at , vagy az én repoziomból: https://github.com/arnoldrobert/Flash-ESP-01-firmware/raw/master/v1.3.0.2_AT_Firmware.bin , és írjuk rá az ESP-re a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 v1.3.0.2_AT_Firmware.bin"** . Ha megvagyunk a 7. és 8. gombot billentsük OFF felé (GPIO0 -t lecsatlakoztatjuk a GND(-) -ról), hogy használhassuk az AT parancsokat.
 
-3. Ha csak az AT parancsokat szeretnénk próbálgatni, akkor 6. és 7. gombot ON felé, a többit OFF irányba,
+3. Ha csak az AT parancsokat szeretnénk próbálgatni, akkor 5. és 6. gombot ON felé, a többit OFF irányba,
+Nyissunk meg egy üres Arduino file-t, állítsuk be a COM portot, majd lépjünk a Serial Monitor-ba és írjuk a következő parancsot: **"AT+GMR"** .
+```
+AT+GMR
+
+AT version:0.40.0.0(Aug  8 2015 14:45:58)
+SDK version:1.3.0
+Ai-Thinker Technology Co.,Ltd.
+Build:1.3.0.2 Sep 11 2015 11:48:04
+OK
+```
 4. Az Arduinoval szeretnénk vezérelni az ESP -t akkor 3., 4., 5. és 6. gombot ON felé, a többit OFF irányba,
 5. Végül ha csak a wifit szeretnénk használni akkor az 1. és 2. gombot ON felé, a többit kikapcsolni.
