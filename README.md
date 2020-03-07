@@ -33,6 +33,8 @@ Utána töltsük le a az aktuális firmware-t a hivatalos ESPRESSIF oldaláról:
 
 3. Ha csak az AT parancsokat szeretnénk próbálgatni, akkor 5. és 6. gombot ON felé, a többit OFF irányba,
 Nyissunk meg egy üres Arduino file-t, állítsuk be a COM portot, majd lépjünk a Serial Monitor-ba és írjuk a következő parancsot: **"AT+GMR"** .
+
+Ezt fogja kiírni:
 ```
 AT+GMR
 
@@ -42,5 +44,7 @@ Ai-Thinker Technology Co.,Ltd.
 Build:1.3.0.2 Sep 11 2015 11:48:04
 OK
 ```
+Innen tudod az AT parancsokat letölteni: https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf .
+
 4. Az Arduinoval szeretnénk vezérelni az ESP -t akkor 3., 4., 5. és 6. gombot ON felé, a többit OFF irányba,
 5. Végül ha csak a wifit szeretnénk használni akkor az 1. és 2. gombot ON felé, a többit kikapcsolni.
