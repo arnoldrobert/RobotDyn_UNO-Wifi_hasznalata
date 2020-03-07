@@ -1,4 +1,4 @@
-# RobotDyn_UNO-Wifi_hasznalata
+# RobotDyn_UNO+Wifi_hasznalata
 
 Nagyon sokan panaszkodnak, hogy nem tudják használni ennek a mikrovezérlőnek a Wifijét (ESP-03), vagyis annak beállításait, ezért írtam ezta cikket. A gond ott gyökeredzik, hogy magát az ESP modult nem ismerik a felhasználók. Ennél a modulnál a firmware -t a GPIO0 láb GND(-) -ra kötésével tehetjük meg. Míg amikor csak használjuk, le kell róla csatlakoztatnunk. Ennél a modulnál kényelmesen egy gomb van erre a célra kialakítva, amit ki-be kapcsolhatunk, attól függően, hogy mit szeretnénk csinálni. Én különösen megszerettem ezt a modult, mert az ESP moduljának öt ki/be lába van (GPIO16, GPIO12, GPIO04 GPIO02, GPIO0), ami sokszor nagyon jól jön. Továbbá lehetőség van egyszerre Arduinót és MicroPythont használni ugyanazon a modulon.
 A firmware ráírására szükség lesz az esptool.py alkalmazásra, amit innen tudsz letölteni: https://github.com/espressif/esptool és a Pythonra, mert nélküle nem lehet használni az esptool.py -t, amit pedig innen tölthető le:https://www.python.org/downloads/ .
