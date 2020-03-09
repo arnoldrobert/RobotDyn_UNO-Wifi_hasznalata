@@ -48,3 +48,7 @@ OK
 Innen tudod az AT parancsokat letölteni: https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf .
 
 4. Amikor az Arduinoval szeretnénk vezérelni az ESP -t akkor 3. és 4. gombot ON felé, a többit OFF irányba. A modulon lévő ESP lábak közül keressük meg a Tx és az Rx -et. Ezeket majd a programban megadott Arduino digitális lábakhoz kell kötni. A Tx lábat közvetlenül csatlakoztathatjuk az Arduino digitális lábára, mig az Rx-et feszültségosztón kersztül csatlakoztassuk, mivel az Arduino 5V-ot míg az ESP 3.3V-ot használ. A feszültségosztó kapcsolási rajza a file-ok között van. Ezen az oldalon magyarázattal és Arduino kóddal találtok példákat: http://allaboutee.com/2015/01/02/esp8266-arduino-led-control-from-webpage/ .
+
+> MicroPython firmware ráírása az ESP -re.
+
+A második lépést kell megismételni: az esptool.py segitségével törölni kell a flash-t **"esptool.py erase_flash"**, majd ráírni az új MicroPython firmware-t amit innen lehet letölteni http://micropython.org/download#esp8266 , a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 esp8266-20190529-v1.11.bin"** .
