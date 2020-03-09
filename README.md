@@ -47,5 +47,5 @@ OK
 ```
 Innen tudod az AT parancsokat letölteni: https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf .
 
-4. Amikor az Arduinoval szeretnénk vezérelni az ESP -t akkor 3. és 4. gombot ON felé, a többit OFF irányba. A modulon lévő ESP lábak közül keressük meg a Tx és az Rx -et. Ezeket majd a programban megadott Arduino digitális lábakhoz kell kötni. A Tx lábat közvetlenül csatlakoztathatjuk az Arduino digitális lábára, mig az Rx-et feszültség osztón kersztül csatlakoztassuk, mivel az Arduino 5V-ot míg az ESP 3.3V-ot használ. A feszültség osztó kapcsolási rajza a filok között.
+4. Amikor az Arduinoval szeretnénk vezérelni az ESP -t akkor 3. és 4. gombot ON felé, a többit OFF irányba. A modulon lévő ESP lábak közül keressük meg a Tx és az Rx -et. Ezeket majd a programban megadott Arduino digitális lábakhoz kell kötni. A Tx lábat közvetlenül csatlakoztathatjuk az Arduino digitális lábára, mig az Rx-et feszültségosztón kersztül csatlakoztassuk, mivel az Arduino 5V-ot míg az ESP 3.3V-ot használ. A feszültségosztó kapcsolási rajza a filok között van.
 5. Végül ha csak a wifit szeretnénk használni akkor az 1. és 2. gombot ON felé, a többit kikapcsolni.
