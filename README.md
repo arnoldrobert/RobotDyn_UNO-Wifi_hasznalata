@@ -51,4 +51,4 @@ Innen tudod az AT parancsokat letölteni: https://www.espressif.com/sites/defaul
 
 > MicroPython firmware ráírása az ESP -re.
 
-A második lépést kell megismételni: az esptool.py segitségével törölni kell a flash-t **"esptool.py erase_flash"**, majd ráírni az új MicroPython firmware-t amit innen lehet letölteni http://micropython.org/download#esp8266 , a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 esp8266-20190529-v1.11.bin"** .
+A második lépést kell megismételni: az esptool.py segitségével törölni kell a flash-t **"esptool.py erase_flash"**, majd ráírni az új MicroPython firmware-t, amit innen lehet letölteni http://micropython.org/download#esp8266 , a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 esp8266-20190529-v1.11.bin"** .
