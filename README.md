@@ -32,7 +32,7 @@ Hard resetting via RTS pin...
 Reseteljük minden parancs között a modult. Most törölnünk kell a flash-t a következő paranccsal: **"esptool.py erase_flash"** .
 Utána töltsük le az aktuális firmware-t a hivatalos ESPRESSIF oldaláról: https://www.espressif.com/en/support/download/at , vagy az én repozitomból: https://github.com/arnoldrobert/Flash-ESP-01-firmware/raw/master/v1.3.0.2_AT_Firmware.bin , és írjuk rá az ESP-re a következő paranccsal: **"esptool.py --port COM4 --baud 74880 --no-stub write_flash -fs 1MB -fm qio 0x0 v1.3.0.2_AT_Firmware.bin"** .
 
-3. Ha csak az AT parancsokat szeretnénk próbálgatni, akkor 5. és 6. gombot ON felé, a többit OFF irányba,
+3. Ha csak az AT parancsokat szeretnénk próbálgatni, akkor 5. és 6. gombot ON felé, a többit OFF irányba.
 Nyissunk meg egy üres Arduino file-t, állítsuk be a COM portot, majd lépjünk a Serial Monitorba, a baud-ot tegyük 115200 -ra, és írjuk a be következő parancsot: **"AT+GMR"** . Használhatunk más UART -ot támogató serial monitort a soros kommunikációra pl. a PuTTY-t is.
 
 Ezt fogja kiírni:
@@ -47,5 +47,5 @@ OK
 ```
 Innen tudod az AT parancsokat letölteni: https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf .
 
-4. Az Arduinoval szeretnénk vezérelni az ESP -t akkor 3., 4., 5. és 6. gombot ON felé, a többit OFF irányba,
+4. Amikor az Arduinoval szeretnénk vezérelni az ESP -t akkor 3. és 4. gombot ON felé, a többit OFF irányba. A modulon lévő ESP lábak közül keressük meg a Tx és az Rx -et. Ezeket majd a programban megadott Arduino digitális lábakhoz kell kötni. A Tx lábat közvetlenül csatlakoztathatjuk az Arduino digitális lábára, mig az Rx-et feszültség osztón kersztül csatlakoztassuk, mivel az Arduino 5V-ot míg az ESP 3.3V-ot használ. A kapcsolás képe a filok között.
 5. Végül ha csak a wifit szeretnénk használni akkor az 1. és 2. gombot ON felé, a többit kikapcsolni.
